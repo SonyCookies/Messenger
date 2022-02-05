@@ -2,6 +2,7 @@ package com.example.messenger
 
 import android.graphics.ColorSpace
 import android.view.WindowManager
+import androidx.compose.animation.AnimatedContentScope.SlideDirection.Companion.End
 import androidx.compose.animation.AnimatedContentScope.SlideDirection.Companion.Start
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -167,7 +168,7 @@ fun LoginScreen() {
             }
 
         )
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -180,7 +181,7 @@ fun LoginScreen() {
                 Checkbox(
                     checked = checkedState.value,
                     modifier = Modifier
-                        .padding(start = 16.dp, end = 10.dp),
+                        .padding(start = 16.dp, end = 5.dp),
                     onCheckedChange = { checkedState.value = it },
                     colors = CheckboxDefaults.colors(
                         checkedColor = Bluish,
@@ -194,6 +195,9 @@ fun LoginScreen() {
                     text = "Remember Me",
                     fontFamily = montserrat,
                     fontWeight = FontWeight.Medium,
+                    fontSize = 12.sp,
+                    modifier = Modifier
+                        .padding(top = 4.dp)
                 )
             }
 
@@ -202,12 +206,14 @@ fun LoginScreen() {
                 text = "Forgot password?",
                 fontFamily = montserrat,
                 fontWeight = FontWeight.Medium,
-                textDecoration = TextDecoration.Underline
-
+                textDecoration = TextDecoration.Underline,
+                fontSize = 12.sp,
+                modifier = Modifier
+                    .padding(top = 4.dp)
             )
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         Button(
             shape = RoundedCornerShape(22.dp),

@@ -47,7 +47,7 @@ fun StartScreen() {
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
-            shape = RoundedCornerShape(32.dp),
+            shape = RoundedCornerShape(22.dp),
             onClick = { /*TODO*/ },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
