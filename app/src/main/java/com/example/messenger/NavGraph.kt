@@ -21,7 +21,17 @@ fun SetupNavGraph(
         composable(
             route = Screen.Login.route
         ) {
-            LoginScreen()
+            LoginScreen(navController)
+        }
+        composable(
+            route = Screen.Signup.route
+        ) {
+            SignupScreen(navController)
+        }
+        composable(
+            route = Screen.Signup.route
+        ) {
+            SuccessScreen(navController)
         }
     }
 }

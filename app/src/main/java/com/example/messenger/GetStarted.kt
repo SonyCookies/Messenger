@@ -54,7 +54,7 @@ fun StartScreen(
         Button(
             shape = RoundedCornerShape(22.dp),
             onClick = {
-                      navController.navigate(route = Screen.Login.route)
+                      navController.navigate(route = Screen.Signup.route)
             },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
@@ -72,22 +72,6 @@ fun StartScreen(
                 fontSize = 16.sp,
             )
         }
-        Spacer(modifier = Modifier.height(10.dp))
-
-        Text(
-            fontWeight = FontWeight.Medium,
-            text = "Create an Account",
-            fontSize = 13.sp,
-            color = White,
-            fontFamily = montserrat,
-            textDecoration = TextDecoration.Underline,
-            modifier = Modifier
-                .clickable {
-
-                }
-                .align(CenterHorizontally)
-
-        )
     }
 }
 

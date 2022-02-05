@@ -28,7 +28,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.messenger.ui.theme.*
 
 @Composable
-fun LoginScreen(
+fun SignupScreen(
     navController: NavController
 ) {
 
@@ -42,7 +42,7 @@ fun LoginScreen(
     ) {
         Text(
             fontWeight = FontWeight.ExtraBold,
-            text = "Login",
+            text = "Sign Up",
             fontSize = 36.sp,
             color = White,
             fontFamily = montserrat,
@@ -132,59 +132,14 @@ fun LoginScreen(
             }
 
         )
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Row(
-            horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            val checkedState = remember { mutableStateOf(false) }
-
-            Row(
-            ) {
-                Checkbox(
-                    checked = checkedState.value,
-                    modifier = Modifier
-                        .padding(start = 16.dp, end = 5.dp),
-                    onCheckedChange = { checkedState.value = it },
-                    colors = CheckboxDefaults.colors(
-                        checkedColor = White,
-                        disabledColor = White,
-                        uncheckedColor = White,
-                        checkmarkColor = Bluish
-                    )
-                )
-                Text(
-                    color = White,
-                    text = "Remember Me",
-                    fontFamily = montserrat,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 12.sp,
-                    modifier = Modifier
-                        .padding(top = 4.dp)
-                )
-            }
-
-            Text(
-                color = White,
-                text = "Forgot password?",
-                fontFamily = montserrat,
-                fontWeight = FontWeight.Medium,
-                textDecoration = TextDecoration.Underline,
-                fontSize = 12.sp,
-                modifier = Modifier
-                    .padding(top = 4.dp)
-                    .clickable {
-
-                    }
-            )
-        }
 
         Spacer(modifier = Modifier.height(40.dp))
 
         Button(
             shape = RoundedCornerShape(22.dp),
-            onClick = { /*TODO*/ },
+            onClick = {
+                      navController.navigate(route = Screen.Success.route)
+            },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
                 contentColor = Bluish
@@ -195,7 +150,7 @@ fun LoginScreen(
 
         ) {
             Text(
-                text = "Login",
+                text = "Sign Up",
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
@@ -206,14 +161,14 @@ fun LoginScreen(
 
         Text(
             fontWeight = FontWeight.Medium,
-            text = "Create an Account",
+            text = "Login Instead",
             fontSize = 13.sp,
             color = White,
             fontFamily = montserrat,
             textDecoration = TextDecoration.Underline,
             modifier = Modifier
                 .clickable {
-                    navController.popBackStack()
+                    navController.navigate(route = Screen.Login.route)
                 }
                 .align(Alignment.CenterHorizontally)
 
@@ -224,8 +179,9 @@ fun LoginScreen(
 
 @Preview
 @Composable
-fun LoginScreenPreview() {
-    LoginScreen(
+fun SignupScreenPreview() {
+    SignupScreen(
         navController = rememberNavController()
     )
 }
+
