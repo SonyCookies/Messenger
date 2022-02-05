@@ -15,12 +15,17 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.messenger.ui.theme.Bluish
 import com.example.messenger.ui.theme.White
 import com.example.messenger.ui.theme.montserrat
 
 @Composable
-fun StartScreen() {
+fun StartScreen(
+    navController: NavController
+) {
+
 
     Column(
         modifier = Modifier
@@ -48,7 +53,9 @@ fun StartScreen() {
 
         Button(
             shape = RoundedCornerShape(22.dp),
-            onClick = { /*TODO*/ },
+            onClick = {
+                      navController.navigate(route = Screen.Login.route)
+            },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
                 contentColor = Bluish
@@ -88,5 +95,7 @@ fun StartScreen() {
 @Preview
 @Composable
 fun StartScreenPreview() {
-    StartScreen()
+    StartScreen(
+        navController = rememberNavController()
+    )
 }
