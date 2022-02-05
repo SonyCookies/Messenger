@@ -82,7 +82,7 @@ fun LoginScreen() {
                 focusedIndicatorColor = White,
                 unfocusedIndicatorColor = White,
                 backgroundColor = Color.Transparent,
-                cursorColor = Bluish,
+                cursorColor = Color.Black,
                 disabledIndicatorColor = Color.Transparent
             ),
             modifier = Modifier
@@ -90,7 +90,7 @@ fun LoginScreen() {
             maxLines = 1,
             textStyle = TextStyle(
                 fontFamily = montserrat,
-                fontWeight = FontWeight.Normal,
+                fontWeight = FontWeight.Medium,
                 fontSize = 16.sp,
                 color = Color.Black
             ),
@@ -100,7 +100,6 @@ fun LoginScreen() {
             label = {
                 Text(
                     text = "Username",
-                    style = Typography.subtitle1
                 )
             }
         )
@@ -131,7 +130,7 @@ fun LoginScreen() {
                 focusedIndicatorColor = White,
                 unfocusedIndicatorColor = White,
                 backgroundColor = Color.Transparent,
-                cursorColor = Bluish,
+                cursorColor = Color.Black,
                 disabledIndicatorColor = Color.Transparent
             ),
             modifier = Modifier
@@ -139,7 +138,7 @@ fun LoginScreen() {
             maxLines = 1,
             textStyle = TextStyle(
                 fontFamily = montserrat,
-                fontWeight = FontWeight.Normal,
+                fontWeight = FontWeight.Medium,
                 fontSize = 16.sp,
                 color = Color.Black
             ),
@@ -150,7 +149,6 @@ fun LoginScreen() {
             label = {
                 Text(
                     text = "Password",
-                    style = Typography.subtitle1
                 )
             },
             trailingIcon = {
@@ -182,10 +180,10 @@ fun LoginScreen() {
                         .padding(start = 16.dp, end = 5.dp),
                     onCheckedChange = { checkedState.value = it },
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Bluish,
+                        checkedColor = White,
                         disabledColor = White,
                         uncheckedColor = White,
-                        checkmarkColor = White
+                        checkmarkColor = Bluish
                     )
                 )
                 Text(
@@ -229,7 +227,7 @@ fun LoginScreen() {
 
         ) {
             Text(
-                text = "Get Started",
+                text = "Login",
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
