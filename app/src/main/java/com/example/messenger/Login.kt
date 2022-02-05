@@ -86,7 +86,6 @@ fun LoginScreen() {
                 disabledIndicatorColor = Color.Transparent
             ),
             modifier = Modifier
-                .height(50.dp)
                 .fillMaxWidth(),
             maxLines = 1,
             textStyle = TextStyle(
@@ -136,7 +135,6 @@ fun LoginScreen() {
                 disabledIndicatorColor = Color.Transparent
             ),
             modifier = Modifier
-                .height(50.dp)
                 .fillMaxWidth(),
             maxLines = 1,
             textStyle = TextStyle(
@@ -210,6 +208,9 @@ fun LoginScreen() {
                 fontSize = 12.sp,
                 modifier = Modifier
                     .padding(top = 4.dp)
+                    .clickable{
+
+                    }
             )
         }
 
