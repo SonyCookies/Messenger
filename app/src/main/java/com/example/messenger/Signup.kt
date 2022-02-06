@@ -35,7 +35,7 @@ fun SignupScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Bluish)
+            .background(SignupBg)
             .padding(32.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -142,7 +142,7 @@ fun SignupScreen(
             },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
-                contentColor = Bluish
+                contentColor = SignupBg
             ),
             modifier = Modifier
                 .requiredHeight(60.dp)

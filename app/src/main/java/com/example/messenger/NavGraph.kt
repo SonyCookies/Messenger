@@ -29,9 +29,14 @@ fun SetupNavGraph(
             SignupScreen(navController)
         }
         composable(
-            route = Screen.Signup.route
+            route = Screen.Success.route
         ) {
             SuccessScreen(navController)
+        }
+        composable(
+            route = Screen.Home.route
+        ) {
+            HomeScreen(navController = navController)
         }
     }
 }

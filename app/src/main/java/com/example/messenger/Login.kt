@@ -184,7 +184,9 @@ fun LoginScreen(
 
         Button(
             shape = RoundedCornerShape(22.dp),
-            onClick = { /*TODO*/ },
+            onClick = {
+                navController.navigate(route = Screen.Home.route)
+            },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = White,
                 contentColor = Bluish
@@ -213,7 +215,11 @@ fun LoginScreen(
             textDecoration = TextDecoration.Underline,
             modifier = Modifier
                 .clickable {
-                    navController.popBackStack()
+                    navController.navigate(route = Screen.Signup.route) {
+                        popUpTo(route = Screen.Signup.route) {
+                            inclusive = true
+                        }
+                    }
                 }
                 .align(Alignment.CenterHorizontally)
 
