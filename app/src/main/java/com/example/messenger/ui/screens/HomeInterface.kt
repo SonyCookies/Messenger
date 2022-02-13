@@ -26,6 +26,8 @@ import com.example.messenger.ui.theme.Blackish
 import com.example.messenger.ui.theme.GrayishWhite
 import com.example.messenger.ui.theme.White
 import com.example.messenger.ui.theme.montserrat
+import com.example.messenger.ui.viewmodels.MainViewModel
+import com.example.messenger.util.SearchWidgetState
 
 @Composable
 fun HomeScreen(

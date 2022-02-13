@@ -1,4 +1,4 @@
-package com.example.messenger
+package com.example.messenger.navigation
 
 sealed class Screen(val route: String) {
     object GetStarted: Screen(route = "getStarted_screen")

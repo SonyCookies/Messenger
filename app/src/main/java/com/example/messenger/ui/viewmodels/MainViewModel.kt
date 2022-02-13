@@ -1,9 +1,10 @@
-package com.example.messenger
+package com.example.messenger.ui.viewmodels
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import com.example.messenger.util.SearchWidgetState
 
 class MainViewModel : ViewModel() {
 
