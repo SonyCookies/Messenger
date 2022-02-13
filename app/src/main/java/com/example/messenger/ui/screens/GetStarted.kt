@@ -1,4 +1,4 @@
-package com.example.messenger
+package com.example.messenger.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
